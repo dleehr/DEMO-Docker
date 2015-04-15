@@ -16,4 +16,5 @@ set -e
 [ -z "$CONT_INPUT_FILE" ] && echo "Error: The CONT_INPUT_FILE variable must be set" && exit 1
 [ -z "$CONT_OUTPUT_FILE" ] && echo "Error: The CONT_OUTPUT_FILE variable must be set" && exit 1
 
+echo "Putting size of $CONT_INPUT_FILE into $CONT_OUTPUT_FILE"
 stat -c '%s' $CONT_INPUT_FILE > $CONT_OUTPUT_FILE
